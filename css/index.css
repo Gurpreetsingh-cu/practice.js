@@ -190,11 +190,14 @@ header {
 }
 
 .category-items, .items-container {
+    display: flex;
     width: 80%;
     margin: 50px 10%;
-    display: flex;
+    
+   
     flex-wrap: wrap;
     justify-content: space-evenly;
+
 }
 
 .sale_item {
@@ -318,12 +321,4 @@ header {
     color: #fff;
     left: 13px;
     top: -44px;
-    font-weight: 700;
-    cursor: pointer;
-}
-.action_container {
-    text-decoration: none;
-}
-a.action_container:link {
-    color:black;
-}
+    font-weight 2--
