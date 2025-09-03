@@ -5,8 +5,7 @@ onLoad();
         let bagItemsStr = localStorage.getItem('bagItems');
         bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
         homePageDisplayItem();
-        displayBagItemCount();
-    }
+        displayBagItemCount(); }
 function addToBag(itemId) {
     bagItems.push(itemId);
     displayBagItemCount();
@@ -50,7 +49,7 @@ function homePageDisplayItem() {
         `;
     });
 
-    itemContainer.innerHTML = "innerHTML";
+    itemContainer.innerHTML = innerHTML;
 }
 
 

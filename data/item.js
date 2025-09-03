@@ -39,6 +39,7 @@ const items = [
         discount_percentage: 69,
         return_period: 14,
         delivery_date: '10 Oct 2023',
+        ConvenienceFee:99,
         rating: {
             stars: 4.1,
             count: 249,
