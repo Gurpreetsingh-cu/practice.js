@@ -1,26 +1,33 @@
 
-
-
 let bagItems = [];
-
+onLoad();
+    function onLoad(){
+        let bagItemsStr = localStorage.getItem('bagItems');
+        bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+        homePageDisplayItem();
+        displayBagItemCount();
+    }
 function addToBag(itemId) {
     bagItems.push(itemId);
     displayBagItemCount();
+    localStorage.setItem('bagItems' , JSON.stringify(bagItems))
 }
 
 function displayBagItemCount() {
-    const bagItemCountElement = document.querySelector(".bag-item-count");
+    const bagItemCount = document.querySelector(".bag-item-count");
 
-    if (bagItems.length > 0) {
-        bagItemCountElement.innerText = bagItems.length;
-        bagItemCountElement.style.visibility = "visible";
+    if (bagItems.length > 0) {                                                                                 
+        bagItemCount.innerText = bagItems.length;
+        bagItemCount.style.visibility = "visible";
     } else {
-        bagItemCountElement.style.visibility = "hidden";
+        bagItemCount.style.visibility = "hidden";
     }
 }
-
 function homePageDisplayItem() {
-    const itemContainerElement = document.querySelector(".items-container");
+   itemContainer = document.querySelector(".items-container");
+//    if(!itemsContainer){ 
+//     return;
+//    }
     let innerHTML = '';
 
     items.forEach(item => {
@@ -43,9 +50,7 @@ function homePageDisplayItem() {
         `;
     });
 
-    itemContainerElement.innerHTML = innerHTML;
+    itemContainer.innerHTML = innerHTML;
 }
 
-// Initial render
-homePageDisplayItem();
-displayBagItemCount();
+
