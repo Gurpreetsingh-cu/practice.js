@@ -50,7 +50,7 @@ function homePageDisplayItem() {
         `;
     });
 
-    itemContainer.innerHTML = innerHTML;
+    itemContainer.innerHTML = "innerHTML";
 }
 
 
